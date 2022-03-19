@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ai5a-bg-light">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-8">
+        {{ section.content | safe }}
+      </div>
+      <div class="col-4">
+        <a class="twitter-timeline"
+           data-height="400"
+           data-dnt="true"
+           href="https://twitter.com/AI5A_ham?ref_src=twsrc%5Etfw">
+          Tweets by AI5A_ham
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

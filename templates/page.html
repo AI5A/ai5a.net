@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block bigheader %}
+<div class="ai5a-bg-dark-attn ai5a-superpad">
+  <div class="container">
+    <h1 class="ai5a-call">{{ page.title }}</h1>
+    {% if page.extra.subtitle %}
+    <h2>{{ page.extra.subtitle }}</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="page">
+  {% if page.extra.boilerplate %}
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+  {% endif %}
+        {{ page.content | safe }}
+  {% if page.extra.boilerplate %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

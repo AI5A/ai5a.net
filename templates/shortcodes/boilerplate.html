@@ -1,0 +1,13 @@
+{% if class %}
+<div class="{{ class }} ai5a-subs">
+{% endif %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-8">
+      {{ body | markdown | safe }}
+    </div>
+  </div>
+</div>
+{% if class %}
+</div>
+{% endif %}
